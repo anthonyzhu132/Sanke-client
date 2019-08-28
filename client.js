@@ -21,10 +21,14 @@ const connect = function () {
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
-  conn.on('connect', (data) => {
+  conn.on('connect', () => {
     conn.write('Name: AEZ');
+    console.log('Connected to game!!! :)');
+    conn.write('Move: left');
   });
+  
   return conn;
 };
 
 module.exports = connect;
+
