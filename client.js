@@ -24,7 +24,6 @@ const connect = function () {
   conn.on('connect', () => {
     conn.write('Name: AEZ');
     console.log('Connected to game!!! :)');
-    setInterval(() => conn.write('Move: left'), 20);
   });
   
   return conn;
