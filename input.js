@@ -16,6 +16,9 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     setInterval(() => connection.write("Move: right"), 100);
   }
+  if (key === 'j') {
+    connection.write("Say: AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
+  }
 };
 
 const setupInput = function(conn) {

@@ -1,5 +1,5 @@
 const net = require('net');
-
+const short = require('./constants');
 // requiring net from library
 
 // //establishes connection with game server
@@ -16,8 +16,8 @@ const net = require('net');
 
 const connect = function () {
   const conn = net.createConnection({
-    host: '192.168.88.151',
-    port: 50541
+    host: short.IP,
+    port: short.PORT
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
