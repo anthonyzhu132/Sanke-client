@@ -14,14 +14,17 @@ const net = require('net');
 //   return conn;
 // };
 
-const x = function () {
+const connect = function () {
   const conn = net.createConnection({
     host: '192.168.88.151',
     port: 50541
   });
   // interpret incoming data as text
   conn.setEncoding('utf8');
+  conn.on('connect', (data) => {
+    conn.write('Name: AEZ');
+  });
   return conn;
 };
 
-module.exports = x;
+module.exports = connect;
